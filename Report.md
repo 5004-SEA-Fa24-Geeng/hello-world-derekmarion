@@ -7,10 +7,54 @@ The following report contains questions you need to answer as part of your submi
 Please link your UML design file here. See resources in the assignment on how to
 link an image in markdown. You may also use [mermaid] class diagrams if you prefer, if so, include the mermaid code here.  You DO NOT have to include Greeting.java as part of the diagram, just the AlohaWorld application that includes: [AlohaWorld.java], [Greeter.java], and [ConsoleView.java].
 
-
+```mermaid
+---
+title: Aloha World UML
+---
+classDiagram
+    direction LR
+    AlohaWorld --> Greeter
+    AlohaWorld --> ConsoleView : uses
+    ConsoleView --> Greeter: uses
+    class AlohaWorld {
+        -String name
+        -int locality
+        -Greeter greeter
+    }
+    class Greeter {
+        -String name
+        -int locality
+        -List~String~ localityList
+        -static final int HAWAII
+        -static final int CHINA
+        -static final int ITALY
+        -static final int DEFAULT_LOCALITY
+        +Greeter(String name)
+        +Greeter(String name, int locality)
+        +String getName()
+        +int getLocality()
+        +void setLocality(int locality)
+        +String greet()
+        +String greet(boolean asciiOnly)
+        -String getLocalityString()
+        +int hashCode()
+        +boolean equals(Object obj)
+        +String toString()
+        +List~String~ getLocalityList() 
+    } 
+    class ConsoleView {
+        -Scanner SCANNER
+        +String getName()
+        +int getLocality()
+        +boolean checkRunAgain()
+        +void printGreeting()
+    }
+```
 
 ### Program Flow
 Write a short paragraph detailing the flow of the program in your own words. This is to help you understand / trace the code (and give you practice of something called a code walk that will be required in this course).
+
+The AlohaWorld class has a main method that is the program entry point. It uses a ConsoleView object (which need not be instantiated) to collect user input values for name and locality. A new Greeter object, which functions like a dataclass, is then instantiated with these values. The ConsoleView then uses the Greeter object to print a greeting for the user. There is a loop inside AlohaWorld's main method to optionally provide another greeting for the user using the same flow control.
 
 
 ## Assignment Questions
