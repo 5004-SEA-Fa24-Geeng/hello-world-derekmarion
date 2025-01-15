@@ -61,11 +61,15 @@ The AlohaWorld class has a main method that is the program entry point. It uses 
 
 1. List three additional java syntax items you didn't know when reading the code.  (make sure to use * for the list items, see example below, the backtick marks are used to write code inline with markdown)
    
-   * (example) `final class`
+   * String.format()
+   * %%s
+   * static
 
 2. For each syntax additional item listed above, explain what it does in your own words and then link a resource where you figured out what it does in the references section. 
 
-    * (example) The `final` keyword when used on a class prevents the class from being subclassed. This means that the class cannot be extended by another class. This is useful when you want to prevent a class from being modified or extended[^1] . It is often the standard to do this when a class only contains static methods such as driver or utility classes. Math in Java is an example of a final class[^2] .
+    * The String.format() method is used for string interpolation in Java, so you can insert values into a string by invoking the method e.g. String.format("Hello, %s!", this.name). The method is capable of interpolating the return values from functions as well.
+    * The %%s placeholder is used to reserve a string placeholder for a superior interpolation in a situation where you only want to insert one value into a string containing multiple placeholders. This was necessary to use for the Greeter class where we wanted to interpolate the ascii/unicode greeting for the instance and needed to leave the other %s string placeholder in place (because it would be interpolated later by another call to String.format())
+    * The static keyword is used before a class attribute to allow access to the attribute without instantiating the class. This is useful because there are cases where you might have a utility class that has values you need to work with, but don't necessarily need to create an instance of the class. More specifically, I used this keyword when defining constants in the Greeting class that I wanted to use in the constructor for the class itself. Without the static keyword, this would not have been possible.
 
 3. What does `main` do in Java? 
 
