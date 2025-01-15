@@ -54,7 +54,7 @@ classDiagram
 ### Program Flow
 Write a short paragraph detailing the flow of the program in your own words. This is to help you understand / trace the code (and give you practice of something called a code walk that will be required in this course).
 
-The AlohaWorld class has a main method that is the program entry point. It uses a ConsoleView object (which need not be instantiated) to collect user input values for name and locality. A new Greeter object, which functions like a dataclass, is then instantiated with these values. The ConsoleView then uses the Greeter object to print a greeting for the user. There is a loop inside AlohaWorld's main method to optionally provide another greeting for the user using the same flow control.
+The AlohaWorld class has a main method that is the program entry point. It uses a ConsoleView object (which need not be instantiated) to collect user input values for name and locality. A new Greeter object, which functions like a dataclass, is then instantiated with these values. The ConsoleView then uses the Greeter object to print a greeting for the user. There is a loop inside AlohaWorld's main method to optionally provide another greeting for the user using the same flow control. It appears that the Greeting class is not actually used and is only for instructional purposes.
 
 
 ## Assignment Questions
