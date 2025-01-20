@@ -1,17 +1,21 @@
 package student;
 
 /**
- * AlohaWorld is a simple greeter program that takes in input from the client, and greets them with
+ * AlohaWorld is a simple greeter program that takes in input from the client,
+ * and greets them with
  * different greetings.
  *
  * <p>
- * This class is the "Driver" of the program. Most drivers only contain the main method, and are
+ * This class is the "Driver" of the program. Most drivers only contain the main
+ * method, and are
  * used to start the program.
  * </p>
  *
  * <p>
- * Btw, this is a multi-line comment. It is also in a special format called Javadoc. Javadoc is a
- * special type of comment that can be used to generate documentation. It is often used to document
+ * Btw, this is a multi-line comment. It is also in a special format called
+ * Javadoc. Javadoc is a
+ * special type of comment that can be used to generate documentation. It is
+ * often used to document
  * classes and methods. HTML can(and should) be included in these comment types.
  * </p>
  *
@@ -37,10 +41,12 @@ public final class AlohaWorld {
     /**
      * This is the main method. It is the entry point of the program.
      *
-     * static means it can be called without creating an "instance" (object) of the class. As such
+     * static means it can be called without creating an "instance" (object) of the
+     * class. As such
      * static is similar to a function in python.
      *
-     * @param args the command line arguments, if provided, are added to this String array.
+     * @param args the command line arguments, if provided, are added to this String
+     *             array.
      */
     public static void main(String[] args) {
         String name = ConsoleView.getName();
@@ -49,7 +55,7 @@ public final class AlohaWorld {
         Greeter greeter = new Greeter(name, locality);
         ConsoleView.printGreeting(greeter.greet());
 
-        while (!ConsoleView.checkRunAgain()) {
+        while (ConsoleView.checkRunAgain()) {
             locality = ConsoleView.getLocality();
             greeter.setLocality(locality);
             ConsoleView.printGreeting(greeter.greet());
