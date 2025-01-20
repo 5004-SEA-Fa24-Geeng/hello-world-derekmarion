@@ -98,9 +98,11 @@ These questions require deeper thinking of the topic. We don't expect 100% corre
 
 
 1. Why would we want to keep interaction with the client contained to ConsoleView?
+   
     Confining all the client interaction behavior to the ConsoleView class makes the code more modular, reusable and easier to debug. For example, if you combined the Greeter and ConsoleView objects, it might be more difficult to isolate issues with validating user input, writing tests etc. Additionally, modularizing the code in this way makes it more reusable. If you added localities, for example, this would require no changes to the ConsoleView class.
 
 2. Right now, the application isn't very dynamic in that it can be difficult to add new languages and greetings without modifying the code every time. Just thinking programmatically,  how could you make the application more dynamic? You are free to reference Greeting.java and how that could be used in your design.
+   
     Currently all of the logic around how greetings are displayed is located in the Greeter class. However, in Greeting.java we implemented generalized logic for displaying greetings based on how many arguments are supplied during class instantiation. We could implement a hashmap in the Greeter class to map language-specific greetings to locales, and then instantiate Greeting objects based on the hashmap, which could then be called to display a proper greeting. Then all we would have to do to add a greeting is update the hashmap with the correct values, rather than hard-coding conditional logic based on the locale.
 
 
