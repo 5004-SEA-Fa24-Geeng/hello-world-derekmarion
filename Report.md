@@ -73,21 +73,21 @@ The AlohaWorld class has a main method that is the program entry point. It uses 
 
 3. What does `main` do in Java? 
 
-    Go ahead and answer the question as a short paragraph / few sentences. Notice the indent, this is valid because it is a list item. (erase this line before writing.)
+   `main` is the entry point for program execution and makes calls to other methods/classes to orchestrate overall program flow 
 
 
 4. What does `toString()` do in Java? Why should any object class you create have a `toString()` method?
 
-    Same as above - short answer
+    `toString()` is a built in class method that gets overwritten. It is intended to print out a string representation of the object to the console. The exact format and attributes printed to the console might be different between objects which is why this built in method often gets overwritten.
 
 5. What is javadoc style commenting? What is it used for? 
 
-    Same as above - short answer
+    javadoc style commenting is a docstring format that is used to generate html formatted documentation for the public attributes and methods of a class.
 
 
 6. Describe Test Driving Development (TDD) in your own words. 
 
-    Same as above - short answer    
+    Test Driven Development is the practice of writing unit tests first to define basic inputs and outputs for a class, and then writing an implementation of the class or object that will pass the test. Then more tests are written that serve as the specification for additional behaviors/outputs for the class or object, and the implementation is extended to pass these tests, and so on until something is feature complete.
 
 7. Go to the [Markdown Playground](MarkdownPlayground.md) and add at least 3 different markdown elements you learned about by reading the markdown resources listed in the document. Additionally you need to add a mermaid class diagram (of your choice does not have to follow the assignment. However, if you did use mermaid for the assignment, you can just copy that there). Add the elements into the markdown file, so that the formatting changes are reserved to that file. 
 
@@ -98,10 +98,10 @@ These questions require deeper thinking of the topic. We don't expect 100% corre
 
 
 1. Why would we want to keep interaction with the client contained to ConsoleView?
+    Confining all the client interaction behavior to the ConsoleView class makes the code more modular, reusable and easier to debug. For example, if you combined the Greeter and ConsoleView objects, it might be more difficult to isolate issues with validating user input, writing tests etc. Additionally, modularizing the code in this way makes it more reusable. If you added localities, for example, this would require no changes to the ConsoleView class.
 
-
-2. Right now, the application isn't very dynamic in that it can be difficult to add new languages and greetings without modifying the code every time. Just thinking programmatically,  how could you make the application more dynamic? You are free to reference Geeting.java and how that could be used in your design.
-
+2. Right now, the application isn't very dynamic in that it can be difficult to add new languages and greetings without modifying the code every time. Just thinking programmatically,  how could you make the application more dynamic? You are free to reference Greeting.java and how that could be used in your design.
+    Currently all of the logic around how greetings are displayed is located in the Greeter class. However, in Greeting.java we implemented generalized logic for displaying greetings based on how many arguments are supplied during class instantiation. We could implement a hashmap in the Greeter class to map language-specific greetings to locales, and then instantiate Greeting objects based on the hashmap, which could then be called to display a proper greeting. Then all we would have to do to add a greeting is update the hashmap with the correct values, rather than hard-coding conditional logic based on the locale.
 
 
 > [!IMPORTANT]

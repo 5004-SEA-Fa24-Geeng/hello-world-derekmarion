@@ -1,5 +1,59 @@
 # Markdown Playground
+```mermaid
+---
+title: Aloha World UML
+---
+classDiagram
+    direction LR
+    AlohaWorld --> Greeter
+    AlohaWorld --> ConsoleView : uses
+    ConsoleView --> Greeter: uses
+    class AlohaWorld {
+        -String name
+        -int locality
+        -Greeter greeter
+    }
+    class Greeter {
+        -String name
+        -int locality
+        -List~String~ localityList
+        -static final int HAWAII
+        -static final int CHINA
+        -static final int ITALY
+        -static final int DEFAULT_LOCALITY
+        +Greeter(String name)
+        +Greeter(String name, int locality)
+        +String getName()
+        +int getLocality()
+        +void setLocality(int locality)
+        +String greet()
+        +String greet(boolean asciiOnly)
+        -String getLocalityString()
+        +int hashCode()
+        +boolean equals(Object obj)
+        +String toString()
+        +List~String~ getLocalityList() 
+    } 
+    class ConsoleView {
+        -Scanner SCANNER
+        +String getName()
+        +int getLocality()
+        +boolean checkRunAgain()
+        +void printGreeting()
+    }
+```
+# New Markdown Elements
+Below are three examples of markdown elements I learned about during this assignment
 
+> [!IMPORTANT]
+> I learned about blockquotes with the addition
+> of a special header
+>
+
+--- I learned about horizontal rules
+
+I learned about references [1]
+---
 Use this file to add example markdown elements you learned about by reading the markdown resources below. You need to add at least 3 different markdown elements you learned about, and a mermaid class diagram (of your choice does not have to follow the assignment. However, if you did use mermaid for the assignment, you can just copy that here). 
 
 Mermaid is a markdown language that allows you to create diagrams. You can find more information about mermaid in the resources below. It has become popular enough that github has included it as an option in their markdown.  For built in markdown readers, such as the one built into IntelliJ or VSCode, you may need to install a plugin to render the mermaid diagrams. 
@@ -20,4 +74,62 @@ Mermaid is a markdown language that allows you to create diagrams. You can find 
 
 
 <!-- start your playground code under this dashed line -->
-----
+---
+```mermaid
+---
+title: Aloha World UML
+---
+classDiagram
+    direction LR
+    AlohaWorld --> Greeter
+    AlohaWorld --> ConsoleView : uses
+    ConsoleView --> Greeter: uses
+    class AlohaWorld {
+        -String name
+        -int locality
+        -Greeter greeter
+    }
+    class Greeter {
+        -String name
+        -int locality
+        -List~String~ localityList
+        -static final int HAWAII
+        -static final int CHINA
+        -static final int ITALY
+        -static final int DEFAULT_LOCALITY
+        +Greeter(String name)
+        +Greeter(String name, int locality)
+        +String getName()
+        +int getLocality()
+        +void setLocality(int locality)
+        +String greet()
+        +String greet(boolean asciiOnly)
+        -String getLocalityString()
+        +int hashCode()
+        +boolean equals(Object obj)
+        +String toString()
+        +List~String~ getLocalityList() 
+    } 
+    class ConsoleView {
+        -Scanner SCANNER
+        +String getName()
+        +int getLocality()
+        +boolean checkRunAgain()
+        +void printGreeting()
+    }
+```
+# New Markdown Elements
+Below are three examples of markdown elements I learned about during this assignment
+
+> [!IMPORTANT]
+> I learned about blockquotes with the addition
+> of a special header
+>
+
+--- 
+I learned about horizontal rules
+
+I learned about reference links [1]
+
+
+[1]: www.example.com
