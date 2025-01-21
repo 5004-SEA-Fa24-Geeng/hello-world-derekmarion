@@ -9,25 +9,25 @@ package student;
  */
 public class Greeting {
 
-    /** An integer value for the locality */
+    /** An integer value for the locality. */
     private int localityId;
 
-    /** A String value for the locality */
+    /** A String value for the locality. */
     private String localityName;
 
-    /** An ASCII greeting for the given locality */
+    /** An ASCII greeting for the given locality. */
     private String asciiGreeting;
 
-    /** A UNICODE greeting for the given locality */
+    /** A UNICODE greeting for the given locality. */
     private String unicodeGreeting;
 
-    /** The full greeting that includes ASCII/UNICODE greeting and name */
+    /** The full greeting that includes ASCII/UNICODE greeting and name. */
     private String formatStr;
 
-    /** Default format for formatStr */
+    /** Default format for formatStr. */
     private static final String DEFAULT_FORMAT_STR = "%s, %%s!";
 
-    /** Default ASCII greeting */
+    /** Default ASCII greeting. */
     private static final String DEFAULT_GREETING = "Hello";
 
     /**
@@ -65,8 +65,8 @@ public class Greeting {
     }
 
     /**
-     * Default greeting that creates "Hello, {name}!"
-     * 
+     * Default greeting that creates "Hello, {name}!".
+     *
      * @param localityId   the int value of the locality
      * @param localityName the string value of the locality
      */
@@ -75,8 +75,8 @@ public class Greeting {
     }
 
     /**
-     * Getter for the localityId of the Greeting
-     * 
+     * Getter for the localityId of the Greeting.
+     *
      * @return localityId
      */
     public int getLocalityID() {
@@ -84,8 +84,8 @@ public class Greeting {
     }
 
     /**
-     * Getter for the localityName of the Greeting
-     * 
+     * Getter for the localityName of the Greeting.
+     *
      * @return localityName
      */
     public String getLocalityName() {
@@ -93,8 +93,8 @@ public class Greeting {
     }
 
     /**
-     * Getter for the asciiGreeting of the Greeting
-     * 
+     * Getter for the asciiGreeting of the Greeting.
+     *
      * @return asciiGreeting
      */
     public String getAsciiGreeting() {
@@ -102,8 +102,8 @@ public class Greeting {
     }
 
     /**
-     * Getter for the unicodeGreeting of the Greeting
-     * 
+     * Getter for the unicodeGreeting of the Greeting.
+     *
      * @return unicodeGreeting
      */
     public String getUnicodeGreeting() {
@@ -113,7 +113,7 @@ public class Greeting {
     /**
      * Gets the unicode format string. This string will have a %s, so that the name
      * can be inserted into the greeting in the correct location.
-     * 
+     *
      * @return unicode formatStr
      */
     public String getFormatStr() {
@@ -124,7 +124,7 @@ public class Greeting {
      * Returns the format string with the greeting inserted into the format. This
      * string will have a %s, so that the name can be inserted into the greeting in
      * the correct location.
-     * 
+     *
      * @param asciiOnly true is ascii only greeting is desired, false if unicode
      * @return ascii only formatStr
      */
@@ -137,7 +137,7 @@ public class Greeting {
      * purposes. Example string format:
      * {localityID:1, localityName:"Hawaii", asciiGreeting:"Aloha",
      * unicodeGreeting:"Aloha"}
-     * 
+     *
      * @return Full unicode/ascii greeting with name
      */
     public String toString() {
