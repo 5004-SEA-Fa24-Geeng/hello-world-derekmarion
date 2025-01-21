@@ -15,7 +15,7 @@ capacity.
   
 Did you use any external resources (you do not have to cite in class material)? (Cite them below)
 
-* GitHub Copilot chat (GPT-4o)
+* GitHub Copilot. (2023). *GitHub Copilot* [Computer software]. GitHub. https://github.com/features/copilot
 
 
 (Optional) What was your favorite part of the assignment?
