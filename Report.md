@@ -17,9 +17,7 @@ classDiagram
     AlohaWorld --> ConsoleView : uses
     ConsoleView --> Greeter: uses
     class AlohaWorld {
-        -String name
-        -int locality
-        -Greeter greeter
+       +main(String[] args)
     }
     class Greeter {
         -String name
