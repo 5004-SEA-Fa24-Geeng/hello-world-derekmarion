@@ -2,27 +2,38 @@ package student;
 
 /**
  * This class is a place holder which you will fully implement based on the
- * javadoc
- * 
+ * javadoc.
+ *
  * https://cs5004-khoury-lionelle.github.io/hello_world/student/package-summary.html
- * 
+ *
  */
 public class Greeting {
 
+    /** An integer value for the locality */
     private int localityId;
+
+    /** A String value for the locality */
     private String localityName;
+
+    /** An ASCII greeting for the given locality */
     private String asciiGreeting;
+
+    /** A UNICODE greeting for the given locality */
     private String unicodeGreeting;
+
+    /** The full greeting that includes ASCII/UNICODE greeting and name */
     private String formatStr;
 
-    // These are used as default values in constructor calls to the main constructor
+    /** Default format for formatStr */
     private static final String DEFAULT_FORMAT_STR = "%s, %%s!";
+
+    /** Default ASCII greeting */
     private static final String DEFAULT_GREETING = "Hello";
 
     /**
      * Greeting that creates a greeting with ascii and unicode characters. It makes
      * no assumptions and everything needs to be provided.
-     * 
+     *
      * @param localityId      the int value of the locality
      * @param localityName    the string value of the locality
      * @param asciiGreeting   the ascii greeting for the given locality
@@ -40,11 +51,11 @@ public class Greeting {
     }
 
     /**
-     * 
+     *
      * Greeting that creates a greeting with ascii and unicode characters assuming
      * the language is already using ascii letters only. It also assumes the format
-     * of the greeting to be "{greeting}, {name}!"
-     * 
+     * of the greeting to be "{greeting}, {name}!".
+     *
      * @param localityId    the int value of the locality
      * @param localityName  the string value of the locality
      * @param asciiGreeting the ascii greeting for the given locality
@@ -65,6 +76,8 @@ public class Greeting {
 
     /**
      * Getter for the localityId of the Greeting
+     * 
+     * @return localityId
      */
     public int getLocalityID() {
         return this.localityId;
@@ -72,6 +85,8 @@ public class Greeting {
 
     /**
      * Getter for the localityName of the Greeting
+     * 
+     * @return localityName
      */
     public String getLocalityName() {
         return this.localityName;
@@ -79,6 +94,8 @@ public class Greeting {
 
     /**
      * Getter for the asciiGreeting of the Greeting
+     * 
+     * @return asciiGreeting
      */
     public String getAsciiGreeting() {
         return this.asciiGreeting;
@@ -86,6 +103,8 @@ public class Greeting {
 
     /**
      * Getter for the unicodeGreeting of the Greeting
+     * 
+     * @return unicodeGreeting
      */
     public String getUnicodeGreeting() {
         return this.unicodeGreeting;
@@ -94,6 +113,8 @@ public class Greeting {
     /**
      * Gets the unicode format string. This string will have a %s, so that the name
      * can be inserted into the greeting in the correct location.
+     * 
+     * @return unicode formatStr
      */
     public String getFormatStr() {
         return String.format(this.formatStr, this.unicodeGreeting);
@@ -103,6 +124,9 @@ public class Greeting {
      * Returns the format string with the greeting inserted into the format. This
      * string will have a %s, so that the name can be inserted into the greeting in
      * the correct location.
+     * 
+     * @param asciiOnly true is ascii only greeting is desired, false if unicode
+     * @return ascii only formatStr
      */
     public String getFormatStr(boolean asciiOnly) {
         return String.format(this.formatStr, this.asciiGreeting);
@@ -113,6 +137,8 @@ public class Greeting {
      * purposes. Example string format:
      * {localityID:1, localityName:"Hawaii", asciiGreeting:"Aloha",
      * unicodeGreeting:"Aloha"}
+     * 
+     * @return Full unicode/ascii greeting with name
      */
     public String toString() {
         return String.format("{localityID:%s, localityName:\"%s\", asciiGreeting:\"%s\", unicodeGreeting:\"%s\"}",
